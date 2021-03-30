@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="200dp"
+       android:src="@drawable/login_image"
+       android:padding="20px"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etName"
+        android:hint="Enter FullName  "
+        android:layout_marginHorizontal="50px"
+        android:layout_marginTop="50dp"/>
+
+
+ <EditText
+     android:id="@+id/etAge"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginHorizontal="50px"
+     android:layout_marginTop="30px"
+     android:hint="Enter Age  "
+     android:inputType="number" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEmail"
+        android:hint="Enter Email Address "
+        android:layout_marginHorizontal="50px"
+        android:layout_marginTop="30px"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50px"
+        android:layout_marginTop="30px"
+        android:hint="Enter Password  "
+        android:inputType="textPassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegister"
+        android:text="Register me "
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+
+   <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text=" Sign In"
+       android:textSize="50px"
+       android:textAlignment="center"
+      android:id="@+id/signInTextView"
+       android:gravity="center_horizontal" />
+
+
+
+ <ProgressBar
+     android:layout_marginTop="50px"
+     android:id="@+id/progressBar"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center_horizontal"
+     android:indeterminate="false"
+     android:progressDrawable="@drawable/loading"
+     android:visibility="invisible" />
+
+
+</LinearLayout>

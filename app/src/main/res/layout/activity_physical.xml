@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".PhysicalActivity">
+
+
+    <TextView
+        android:textSize="100px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="this is Weight"
+        android:id="@+id/textViewWeight"/>
+
+    <TextView
+        android:textSize="100px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="this is Height"
+        android:id="@+id/textViewHeight"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is BMI"
+        android:textSize="100px"
+        android:id="@+id/textViewBmi"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add new Data"
+        android:id="@+id/addDataBtn"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/progressBar"/>
+
+
+
+</LinearLayout>
