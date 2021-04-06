@@ -45,6 +45,17 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        progressBar.setVisibility(View.VISIBLE);
+        if (mAuth.getCurrentUser() != null){
+            startActivity(new Intent(this, UserActivity.class));
+            progressBar.setVisibility(View.INVISIBLE);
+            finish();
+        }
+
+        if (mAuth.getCurrentUser() == null){
+            progressBar.setVisibility(View.INVISIBLE);
+        }
+
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
