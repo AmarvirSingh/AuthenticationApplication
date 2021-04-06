@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ public class UserActivity extends AppCompatActivity {
     TextView name, age, email, movie;
     EditText etMovie;
 
+    ProgressBar progressBar;
 
     String n, a, mail, film;
     private FirebaseAuth mAuth;
@@ -57,6 +59,7 @@ public class UserActivity extends AppCompatActivity {
         ref = FirebaseDatabase.getInstance().getReference("User");
         user = mAuth.getCurrentUser();
         uId = user.getUid();
+        progressBar = findViewById(R.id.progressBarUser);
 
 
         name = findViewById(R.id.tvName);
