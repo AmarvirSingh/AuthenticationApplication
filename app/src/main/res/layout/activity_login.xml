@@ -49,15 +49,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="20px">
+
         <TextView
+            android:id="@+id/forgetPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forget Password ?"
             android:layout_marginLeft="20px"
-            android:textAlignment="center"
-            android:id="@+id/forgetPassword"
             android:layout_weight="1"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            android:text="Forget Password ?"
+            android:textAlignment="center"
+            android:textColor="#1BDC68" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
