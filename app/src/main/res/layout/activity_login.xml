@@ -21,7 +21,9 @@
         android:layout_marginHorizontal="50px"
         android:layout_marginTop="30px"
         android:background="@drawable/login_page_design"
-        android:hint="Enter Email Address " />
+        android:hint="Enter Email Address "
+        android:textColor="#F1F1F1"
+        android:textColorHint="#938B8B" />
 
     <EditText
         android:id="@+id/etPasswordLogin"
@@ -31,7 +33,9 @@
         android:layout_marginTop="30px"
         android:background="@drawable/login_page_design"
         android:hint="Enter Password  "
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="#8C8888"
+        android:textColorHint="#9F9B9B" />
 
     <Button
         android:layout_width="wrap_content"
