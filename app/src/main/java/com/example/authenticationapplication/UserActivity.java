@@ -33,8 +33,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UserActivity extends AppCompatActivity {
 
-    private Button signOut, btnAddMovie, physicalInfoBtn, minus, plus;
-    TextView name, age, email, movie;
+    private Button minus;
+    private Button plus;
+    TextView name, age, email, movie, progress_text;
     EditText etMovie;
 
     ProgressBar progressBar;
@@ -52,7 +53,7 @@ public class UserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
-        signOut = findViewById(R.id.signOut);
+        Button signOut = findViewById(R.id.signOut);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -67,23 +68,26 @@ public class UserActivity extends AppCompatActivity {
         email = findViewById(R.id.tvEmail);
         movie = findViewById(R.id.tvMovie);
         etMovie =  findViewById(R.id.etMovie);
-        btnAddMovie = findViewById(R.id.btnAddMovie);
-        physicalInfoBtn = findViewById(R.id.physicalInfoBtn);
+        Button btnAddMovie = findViewById(R.id.btnAddMovie);
+        Button physicalInfoBtn = findViewById(R.id.physicalInfoBtn);
         plus = findViewById(R.id.plusProgress);
         minus = findViewById(R.id.minusProgress);
+        progress_text = findViewById(R.id.progress_text);
 
         registerForContextMenu(name);
         refreshPAge();
-
+        progress_text.setText(0 + "%");
         progressBar.setProgress(0);
-        progressBar.setMax(500);
+        progressBar.setMax(100);
 
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int pro = progressBar.getProgress();
-                if ( pro+20 <= progressBar.getMax())
+                if ( pro < progressBar.getMax()){
                 progressBar.setProgress(pro+20);
+                progress_text.setText(pro + 20 + "%");
+                }
             }
         });
 
@@ -95,6 +99,7 @@ public class UserActivity extends AppCompatActivity {
                     Toast.makeText(UserActivity.this, "Can not minus from empty progress bar ", Toast.LENGTH_SHORT).show();
                 }else{
                     progressBar.setProgress(pro-20);
+                    progress_text.setText(pro - 20 + "%");
                 }
 
             }

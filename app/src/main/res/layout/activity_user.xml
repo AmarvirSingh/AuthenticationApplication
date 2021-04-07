@@ -66,14 +66,36 @@
 
     </LinearLayout>
 
-    <ProgressBar
-        android:layout_gravity="center_horizontal"
-        android:layout_width="400px"
-        android:layout_height="400px"
-        android:id="@+id/progressBarUser"
-        android:indeterminateOnly="false"
-        android:progressDrawable="@drawable/circle"
-        android:progress="20"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBarUser"
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateOnly="false"
+            android:progress="20"
+            android:progressDrawable="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="progress"
+            android:id="@+id/progress_text"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBarUser"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarUser"
+            app:layout_constraintStart_toStartOf="@+id/progressBarUser"
+            app:layout_constraintTop_toTopOf="@+id/progressBarUser" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 <LinearLayout
     android:layout_width="match_parent"
