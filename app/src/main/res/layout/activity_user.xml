@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,136 +7,150 @@
     android:orientation="vertical"
     tools:context=".UserActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email Address"
-        android:id="@+id/tvEmail"
-        android:layout_marginTop="50px"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Age"
-        android:layout_marginTop="50px"
-        android:id="@+id/tvAge"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        android:layout_marginTop="50px"
-        android:id="@+id/tvName"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Movie"
-        android:layout_marginTop="50px"
-        android:id="@+id/tvMovie"/>
 
-
-
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Your Favorite Movie Name"
-        android:layout_marginTop="50px"
-        android:id="@+id/etMovie"/>
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="add Movie"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="20px"
-            android:layout_gravity="center"
-            android:id="@+id/btnAddMovie"/>
-
-        <Button
-            android:layout_marginHorizontal="20px"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/physicalInfoBtn"
-            android:text="Physical Info"/>
-
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ProgressBar
-            android:id="@+id/progressBarUser"
-            android:layout_width="400px"
-            android:layout_height="400px"
-            android:layout_gravity="center_horizontal"
-            android:indeterminateOnly="false"
-            android:progress="20"
-            android:progressDrawable="@drawable/circle"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="progress"
-            android:id="@+id/progress_text"
-            app:layout_constraintBottom_toBottomOf="@+id/progressBarUser"
-            app:layout_constraintEnd_toEndOf="@+id/progressBarUser"
-            app:layout_constraintStart_toStartOf="@+id/progressBarUser"
-            app:layout_constraintTop_toTopOf="@+id/progressBarUser" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:id="@+id/tvEmail"
+                android:layout_marginTop="50px"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:layout_marginTop="50px"
+                android:id="@+id/tvAge"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_marginTop="50px"
+                android:id="@+id/tvName"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movie"
+                android:layout_marginTop="50px"
+                android:id="@+id/tvMovie"/>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Favorite Movie Name"
+                android:layout_marginTop="50px"
+                android:id="@+id/etMovie"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="add Movie"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="20px"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnAddMovie"/>
+
+                <Button
+                    android:layout_marginHorizontal="20px"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/physicalInfoBtn"
+                    android:text="Physical Info"/>
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/plusProgress"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="14dp"
-        android:text="PLus"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <Button
-        android:layout_weight="1"
-        android:id="@+id/minusProgress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="14dp"
-        android:text="minus"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <ProgressBar
+                    android:id="@+id/progressBarUser"
+                    android:layout_width="400px"
+                    android:layout_height="400px"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateOnly="false"
+                    android:progress="20"
+                    android:progressDrawable="@drawable/circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="progress"
+                    android:id="@+id/progress_text"
+                    app:layout_constraintBottom_toBottomOf="@+id/progressBarUser"
+                    app:layout_constraintEnd_toEndOf="@+id/progressBarUser"
+                    app:layout_constraintStart_toStartOf="@+id/progressBarUser"
+                    app:layout_constraintTop_toTopOf="@+id/progressBarUser" />
 
 
-</LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/signOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="14dp"
-        android:text="Sign out"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/plusProgress"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="14dp"
+                    android:text="PLus"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/minusProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="14dp"
+                    android:text="minus"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/signOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="14dp"
+                android:text="Sign out"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
