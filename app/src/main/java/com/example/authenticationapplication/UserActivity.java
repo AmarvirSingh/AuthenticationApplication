@@ -33,7 +33,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UserActivity extends AppCompatActivity {
 
-    private Button signOut, btnAddMovie, physicalInfoBtn;
+    private Button signOut, btnAddMovie, physicalInfoBtn, minus, plus;
     TextView name, age, email, movie;
     EditText etMovie;
 
@@ -69,9 +69,36 @@ public class UserActivity extends AppCompatActivity {
         etMovie =  findViewById(R.id.etMovie);
         btnAddMovie = findViewById(R.id.btnAddMovie);
         physicalInfoBtn = findViewById(R.id.physicalInfoBtn);
+        plus = findViewById(R.id.plusProgress);
+        minus = findViewById(R.id.minusProgress);
 
         registerForContextMenu(name);
         refreshPAge();
+
+        progressBar.setProgress(0);
+        progressBar.setMax(500);
+
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pro = progressBar.getProgress();
+                if ( pro+20 <= progressBar.getMax())
+                progressBar.setProgress(pro+20);
+            }
+        });
+
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pro = progressBar.getProgress();
+                if (pro == 0){
+                    Toast.makeText(UserActivity.this, "Can not minus from empty progress bar ", Toast.LENGTH_SHORT).show();
+                }else{
+                    progressBar.setProgress(pro-20);
+                }
+
+            }
+        });
 
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
